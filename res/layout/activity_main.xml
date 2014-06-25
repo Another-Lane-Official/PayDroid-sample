@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/normal_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="click"
+        android:text="都度決済（210円）" />
+
+    <Button
+        android:id="@+id/quick_charge_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/normal_payment"
+        android:layout_centerHorizontal="true"
+        android:onClick="click"
+        android:text="quickCharge（初回）" />
+
+    <Button
+        android:id="@+id/quick_charge_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quick_charge_first"
+        android:layout_centerHorizontal="true"
+        android:onClick="click"
+        android:text="quickCharge（2度目以降）" />
+
+</RelativeLayout>
