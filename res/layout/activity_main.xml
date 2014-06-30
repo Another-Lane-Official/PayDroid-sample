@@ -29,5 +29,15 @@
         android:layout_centerHorizontal="true"
         android:onClick="click"
         android:text="quickCharge（2度目以降）" />
+    
+    
+        <Button
+        android:id="@+id/quick_charge_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quick_charge_second"
+        android:layout_centerHorizontal="true"
+        android:onClick="click"
+        android:text="quickCharge：情報変更" />
 
 </RelativeLayout>

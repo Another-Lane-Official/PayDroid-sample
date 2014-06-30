@@ -1,8 +1,11 @@
 package jp.sample.sample_application;
 
 import jp.alij.paydroid.common.Consts;
+import jp.alij.paydroid.common.CustomerChange;
 import jp.alij.paydroid.common.InputStatus;
+import jp.alij.paydroid.data.CustomerChangeCallback;
 import jp.alij.paydroid.data.TransactionRequest;
+import jp.alij.paydroid.data.TransactionResult;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -74,6 +77,27 @@ public class MainActivity extends Activity {
     		//å_ñÒÇ…çáÇÌÇπÇƒ, idÇ∆pass(Ç‡ÇµÇ≠ÇÕÉÅÅ[Éã)ÇìnÇ∑
     		tr.setCustomerId("xxx");
     		tr.setCustomerPass("fsdf");
+    		
+    		break;
+    		
+    	case R.id.quick_charge_change:
+    		
+    		tr.setCustomerId("xxx");
+    		tr.setCustomerPass("fsdf");
+    		
+    		tr.setCardName("test");
+    		tr.setCardNo("44444444444444444");
+    		tr.setCardMonth("12");
+    		tr.setCardYear("18");
+    		
+    		CustomerChange.changeInfo(this, tr, new CustomerChangeCallback() {
+				@Override
+				public void onCustomerChange(TransactionResult tr) {
+					Toast.makeText(getApplicationContext(), tr.getState(), Toast.LENGTH_LONG).show();
+				}
+			});
+    		
+    		break;
     		
     	}
     	
