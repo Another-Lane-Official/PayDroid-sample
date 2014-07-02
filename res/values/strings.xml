@@ -4,5 +4,12 @@
     <string name="app_name">sample_application</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    
+    <string name="first_button">都度決済（クイックチャージ無）</string>
+    <string name="second_button">quickCharge（初回）</string>
+    <string name="third_button">quickCharge（2度目以降）</string>
+    <string name="fourth_button">quickCharge：ユーザー情報変更</string>
+    <string name="fifth_button">都度決済（クイックチャージ有）</string>
 
 </resources>
