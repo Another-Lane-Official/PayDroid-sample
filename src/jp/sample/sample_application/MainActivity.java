@@ -46,16 +46,25 @@ public class MainActivity extends Activity {
     	
     		//必須パラメータ
     		tr.setAmount(210);
-    		tr.setSiteId("99999928");
-    		tr.setSitePass("qYhWsRLH");
+    		tr.setSiteId("your_site_id");
+    		tr.setSitePass("your_site_password");
     		
-			//任意パラメータ
-    		//契約に合わせて表示・非表示を設定してください
-    		//設定しない場合はfalseになります（非表示）
-			tr.setVisibility_mail(InputStatus.INPUT_STATUS_MANDATORY);
-			tr.setVisibility_adr1(InputStatus.INPUT_STATUS_OPTIONAL);
-			tr.setVisibility_capital(InputStatus.INPUT_STATUS_OPTIONAL);
-			
+    		//アイテム名の表示・非表示
+    		tr.setItemId("ボディローション 1L"); //itemIdを設定しない場合は表示されません
+
+    		//入力パラメータの設定
+    		//デフォルトで非表示
+//    		tr.setVisibility_zip(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_adr1(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_adr2(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_capital(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_country(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_mail(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_name(InputStatus.INPUT_STATUS_OPTIONAL);
+//    		tr.setVisibility_note(InputStatus.INPUT_STATUS_OPTIONAL);
+    		tr.setVisibility_tel(InputStatus.INPUT_STATUS_OPTIONAL);
+    		
+    				
 	    	//SDKを呼び出す
 			Intent i = new Intent(MainActivity.this, jp.alij.paydroid.activities.PaymentActivity.class);		
 			i.putExtra(Consts.TRANSACTION_INDENT, tr);
@@ -68,19 +77,12 @@ public class MainActivity extends Activity {
         	
     		//必須パラメータ
     		tr.setAmount(210);
-    		tr.setSiteId("99999928");
-    		tr.setSitePass("qYhWsRLH");
-    		
-			//任意パラメータ
-    		//契約に合わせて表示・非表示を設定してください
-    		//設定しない場合はfalseになります（非表示）
-			tr.setVisibility_mail(InputStatus.INPUT_STATUS_MANDATORY);
-			tr.setVisibility_adr1(InputStatus.INPUT_STATUS_OPTIONAL);
-			tr.setVisibility_capital(InputStatus.INPUT_STATUS_OPTIONAL);
-			
+    		tr.setSiteId("your_site_id");
+    		tr.setSitePass("your_site_password");
+    								
 			//契約に合わせて, idとpass(もしくはメール)を渡す
-    		tr.setCustomerId("xxx");
-    		tr.setCustomerPass("fsdf"); //customerPassかCustomerMail
+    		tr.setCustomerId("your_customer_id");
+    		tr.setCustomerPass("your_customer_pass"); //customerPassかCustomerMail
 			
 	    	//SDKを呼び出す
 			Intent b = new Intent(MainActivity.this, jp.alij.paydroid.activities.PaymentActivity.class);		
@@ -93,12 +95,12 @@ public class MainActivity extends Activity {
     		
     		//必須パラメータ
     		tr.setAmount(210);
-    		tr.setSiteId("99999928");
-    		tr.setSitePass("qYhWsRLH");    		
+    		tr.setSiteId("your_site_id");
+    		tr.setSitePass("your_site_password");    		
     		
     		//契約に合わせて, idとpass(もしくはメール)を渡す
-    		tr.setCustomerId("xxx");
-    		tr.setCustomerPass("fsdf");
+    		tr.setCustomerId("your_customer_id");
+    		tr.setCustomerPass("your_customer_pass");
     		
     		//クイックチャージフラッグ
     		tr.setQuickChargeStatus(QuickChargeStatus.QUICK_CHARGE_SECOND_TIME_AND_MORE);
@@ -112,16 +114,16 @@ public class MainActivity extends Activity {
     		
     	case R.id.quick_charge_change:
     		
-    		tr.setSiteId("99999928");
-    		tr.setSitePass("qYhWsRLH"); 
+    		tr.setSiteId("your_site_id");
+    		tr.setSitePass("your_site_password"); 
     		
-    		tr.setCustomerId("xxx");
-    		tr.setCustomerPass("fsdf");
+    		tr.setCustomerId("your_customer_id");
+    		tr.setCustomerPass("your_customer_pass");
     		
-    		tr.setCardName("test");
-    		tr.setCardNo("44444444444444444");
-    		tr.setCardMonth("12");
-    		tr.setCardYear("18");
+    		tr.setCardName("card_name");
+    		tr.setCardNo("xxxxxxxxxxxxxxxx");
+    		tr.setCardMonth("xx");
+    		tr.setCardYear("xx");
     		
     		CustomerChange customerChange = new CustomerChange(this, tr, new CustomerChangeCallback() {
 				@Override
